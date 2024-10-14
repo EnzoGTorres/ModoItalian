@@ -37,19 +37,19 @@
   --mb-6:3rem;
 
   /*========== z index ==========*/
-  --z-tooltip:10;
-  --z-fixed:100;  
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
 @media screen and (min-width: 768px){
   :root{
-    --biggest-font-size:4rem;
-    --h1-font-size:2.25rem;
-    --h2-font-size:1.5rem;
-    --h3-font-size:1.25rem;
-    --normal-font-size:1rem;
-    --small-font-size:.875rem;
-    --smaller-font-size:.813rem;
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
   }
 }
 
@@ -63,14 +63,25 @@ html{
 }
 
 /*========== Variables Dark theme ==========*/
-body.dark-them{
-  --title-color:#F1F3F2;
-  --text-color:#C7D1CC;
-  --body-color:#1D2521;
-  --container-color:#27302C;
+
+body.dark-theme {
+  --title-color: #F1F3F2;
+  --text-color: #C7D1CC;
+  --body-color: #1D2521;
+  --container-color: #27302C;
 }
 
+
 /*========== Button Dark/Light ==========*/
+.change-theme{
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 body{
   margin:var(--header-height) 0 0 0;
   font-family:var(--body-font);
@@ -161,7 +172,7 @@ section{
   align-items: center;
 }
 
-@media screen and(max-width:768){
+@media screen and (max-width: 768px){
   .nav__menu{
     position: fixed;
     top: -100%;
@@ -171,21 +182,21 @@ section{
     text-align: center;
     background-color: var(--body-color);
     transition: .4s;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .1) ;
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
     border-radius: 0 0 1rem 1rem;
     z-index: var(--z-fixed);
   }
 }
 
+
 .nav__item{
-  margin-bottom: var(--mb-2) ;
-  padding: 1rem;
+  margin-bottom: var(--mb-2);
 }
 
 .nav__link, .nav__logo, .nav__toggle{
-  color:var(--text-color);
-  font-weight: var(--font-medium);  
-} 
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+}
 
 .nav__logo:hover{
   color: var(--first-color);
@@ -249,20 +260,18 @@ section{
   color: var(--body-color);
 }
 
+
+/* Show scrolltop */
 .show-scroll{
   visibility: visible;
   bottom: 1.5rem;
 }
-
-/* Show scrolltop */
-
 
 /*========== HOME ==========*/
 
 .home__container{
   height: calc(100vh - var(--header-height));
   align-content: center;
-  display: grid;
 }
 
 .home__title{
@@ -281,7 +290,6 @@ section{
   width: 300px;
   justify-self: center;
 }
-
 /*========== BUTTONS ==========*/
 
 .button{
@@ -295,7 +303,6 @@ section{
 
 .button:hover{
   background-color: var(--first-color-alt);
-  color: #FFF;
 }
 
 
@@ -475,7 +482,7 @@ section{
 
 /*========== MEDIA QUERIES ==========*/
 
-@media screen and (min-width:576px){
+@media screen and (min-width: 576px){
   .home__container,
   .about__container,
   .app__container{
@@ -512,19 +519,16 @@ section{
     padding-top: 8rem;
   }
 
-  nav{
+ .nav{
     height: calc(var(--header-height) + 1.5rem);
   }
-
   .nav__list{
     display: flex;
   }
-
   .nav__item{
-    margin-left: var(--mb5);
+    margin-left: var(--mb-5);
     margin-bottom: 0;
   }
-
   .nav__toggle{
     display: none;
   }
@@ -568,6 +572,7 @@ section{
     margin-right: auto;
   }
 
+
   .home__img{
     width: 500px;
   }
@@ -581,8 +586,8 @@ section{
 
 /* For tall screens on mobiles y desktop*/
 
-@media screen and (min-height: 721px){
-  .home__container{
-    height: 640px;
-  }
+@media screen and (min-height: 721px) {
+    .home__container {
+        height: 640px;
+    }
 }
